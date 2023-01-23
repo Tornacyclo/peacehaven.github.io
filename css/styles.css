@@ -11914,3 +11914,71 @@
     transform: rotateY(0deg);
   }
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?sd57vx');
+  src:  url('fonts/icomoon.eot?sd57vx#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?sd57vx') format('truetype'),
+    url('fonts/icomoon.woff?sd57vx') format('woff'),
+    url('fonts/icomoon.svg?sd57vx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-medal:before {
+  content: "\e903";
+}
+.icon-thunder:before {
+  content: "\e904";
+}
+.icon-plane:before {
+  content: "\e905";-
+}
+.icon-phone:before {
+  content: "\e91b";
+}
+.icon-mail:before {
+  content: "\e91c";
+}
+.icon-address:before {
+  content: "\e91d";
+}
+.icon-kaggle:before {
+  content: "\e900";
+}
+.icon-certificate:before {
+  content: "\e906";
+}
+.icon-analytics:before {
+  content: "\e901";
+}
+.icon-writing:before {
+  content: "\e90a";
+}
+.icon-magic:before {
+  content: "\e90b";
+}
+.icon-github:before {
+  content: "\e91a";
+}
+
+.fa-2x {
+    font-size: 2em;
+}
