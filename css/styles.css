@@ -123,7 +123,7 @@ h1:after {
 }
 
 .page {
-  display: block;
+  display: flex;
   width: 30px;
   height: 45px;
   border: 4px solid #FFFFFF;
