@@ -1,4 +1,4 @@
-const loader = document.querySelectorAll('.loader.page');
+const loader = document.querySelector('.loader');
 
 window.addEventListener('load', () => {
 
