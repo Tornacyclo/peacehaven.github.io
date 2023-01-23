@@ -86,15 +86,15 @@ body {
 }
 
 
-* {
+.loader * {
   box-sizing: border-box;
 }
 
-body {
+.loader body {
   background: rebeccapurple;
 }
 
-h1 {
+.loader h1 {
   color: #FFFFFF;
   text-align: center;
   font-family: sans-serif;
@@ -103,7 +103,7 @@ h1 {
   position: relative;
 }
 
-h1:after {
+.loader h1:after {
   position: absolute;
   content: "";
   -webkit-animation: Dots 2s cubic-bezier(0, .39, 1, .68) infinite;
@@ -152,6 +152,12 @@ h1:after {
 .book .page:nth-child(3) {
   -webkit-animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.2s infinite;
   animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.2s infinite;
+}
+
+
+.fondu-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
 }
 
 
