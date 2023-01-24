@@ -11562,7 +11562,7 @@
    height: auto;
    min-height: 35rem;
    padding: 15rem 0;
-   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/Chain.gif");
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), /* url("../assets/img/janik-butz.jpg"); */
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: scroll;
@@ -11641,7 +11641,7 @@
 
  .signup-section {
    padding: 10rem 0;
-   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/janik-butz.jpg");
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), /* url("../assets/img/janik-butz.jpg"); */
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: scroll;
@@ -12017,4 +12017,16 @@
   padding: 0.5em 0.6em;
   font-size: 20px;
 
+}
+
+#background-video {
+height: 100vh;
+width: 100vw;
+object-fit: cover;
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+z-index: -1;
 }
