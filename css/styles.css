@@ -11714,7 +11714,7 @@
     font-size: 150px;
     font-family: "Times New Roman", Times, serif;
     letter-spacing: 15px;
-    margin-bottom: -500px;
+    margin-bottom: -300px;
     margin-left: 20px;
     animation: flash 1.2s linear infinite, moving 1.2s infinite;
 }
@@ -11785,6 +11785,7 @@
   width: 200px;
   height: 140px;
   position: fixed;
+  margin-bottom: 200px;
 }
 .loaderbook:before, .loader:after {
   --r: -6deg;
