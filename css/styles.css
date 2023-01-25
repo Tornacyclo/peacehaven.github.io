@@ -11710,12 +11710,11 @@
     z-index: 9999;
 }
 .lettre {
+    /* font-family: "Times New Roman", Times, serif; */
+    font-size: calc((.4em + 4vmin) + (.4em + 4vmax));
     color: #484848;
-    font-size: 150px;
-    font-family: "Times New Roman", Times, serif;
-    letter-spacing: 15px;
-    margin-bottom: -300px;
-    margin-left: 20px;
+    letter-spacing: 0.2em;
+    margin-bottom: -3em;
     animation: flash 1.2s linear infinite, moving 1.2s infinite;
 }
 .no-scroll {
@@ -11782,17 +11781,17 @@
   --page: rgba(255, 255, 255, 0.36);
   --page-fold: rgba(255, 255, 255, 0.52);
   --duration: 3s;
-  width: 200px;
-  height: 140px;
+  width: 20em;
+  height: 14em;
   position: fixed;
-  margin-bottom: 200px;
+  margin-bottom: 20em;
 }
 .loaderbook:before, .loader:after {
   --r: -6deg;
   content: "";
   position: relative;
   bottom: 8px;
-  width: 120px;
+  width: 12px;
   top: 80%;
   box-shadow: 0 16px 12px var(--shadow);
   transform: rotate(var(--r));
@@ -11801,10 +11800,10 @@
 .loaderbook div {
   width: 100%;
   height: 100%;
-  border-radius: 13px;
+  border-radius: 1.3em;
   position: relative;
-  perspective: 600px;
-  box-shadow: 0 4px 6px var(--shadow);
+  perspective: 60em;
+  box-shadow: 0 .4em .6em var(--shadow);
   background-image: var(--background);
 }
 .loaderbook div ul {
@@ -11818,8 +11817,8 @@
   --o: 0;
   --c: var(--page);
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 1em;
+  left: 1em;
   transform-origin: 100% 50%;
   color: var(--c);
   opacity: var(--o);
@@ -11843,8 +11842,8 @@
   animation-name: page-5;
 }
 .loaderbook div ul li svg {
-  width: 90px;
-  height: 120px;
+  width: 9em;
+  height: 12em;
   display: flex;
 }
 .loaderbook div ul li:first-child {

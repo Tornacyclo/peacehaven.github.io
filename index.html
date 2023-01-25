@@ -155,17 +155,17 @@
           </video>
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center" id="processed">
                         <i class="icon-plane fa-3x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5 typewrite" data-period="2000" data-type='[ "Don&apos;t hesitate to contact me !", "I love to write.", "I love creating things.", "I love to develop." ]'>
+                        <h2 class="text-white mb-5 typewrite" data-period="2000" data-type='["Don&apos;t hesitate to contact me !", "I love to write.", "I love creating things.", "I love to develop."]'>
                           <span class="wrap"></span>
                         </h2>
-                        <form class="form-signup" enctype="text/plain" action="https://docs.google.com/forms/d/17h02gFwKZSP1mR6wV6HkmkEHlLXfIGLC-5fJHYLzj5o/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                        <form class="form-signup" enctype="text/plain" action="https://docs.google.com/forms/d/17h02gFwKZSP1mR6wV6HkmkEHlLXfIGLC-5fJHYLzj5o/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" id="submit">
                             <!--Email address input-->
                             <div class="col input-group-newsletter">
                                 <div class="col"><input class="form-control" style="margin-bottom: 10px;" type="text" name="entry.760458597" id="entry.760458597" placeholder="Enter name..." aria-label="Enter name..."></div>
-                                <div class="col"><input class="form-control" style="margin-bottom: 10px;" id="emailAddress" type="Email" name="entry.135858689" id="entry.135858689" placeholder="Enter email address..." aria-label="Enter email address..."></div>
-                                <div class="col"><textarea class="form-control" style="margin-bottom: 10px;" name="entry.673958742" id="entry.673958742" placeholder="Enter message..." aria-label="Enter message..."></textarea></div>
+                                <div class="col"><input class="form-control" style="margin-bottom: 10px;" id="emailAddress" type="Email" name="entry.135858689" id="entry.135858689" placeholder="Enter email address..." ></div>
+                                <div class="col"><textarea class="form-control" style="margin-bottom: 10px;" name="entry.673958742" id="entry.673958742" placeholder="Enter message..." ></textarea></div>
                                 <div class="col"><select class="form-control" style="margin-bottom: 10px; height:50px;" name="entry.402816371" id="entry.402816371">
                                   <option selected="true" disabled="disabled">Choose country</option>
                                   <option value="Afghanistan">Afghanistan</option>
@@ -481,13 +481,33 @@
         <script src="js/scripts.js"></script>
         <script src="js/app.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">var submitted = false;</script>
         <script type="text/javascript">
-        $('#signup').on('submit', function(e) {
-          $('#signup *').fadeOut(2000);
-          var elem = $('<div class="text-white mb-5 text-center" style="font-size: 25px;">Your submission has been processed !</div>');
-          $('#signup').prepend(elem);
+          $('#signup').on('submit', function(e) {
+            $('#submit *').fadeOut(2000);
+            $('#processed *').fadeOut(1000);
+            var elem = `<h2 class="text-white mb-5 typewrite" data-period="2000" data-type='["Your submission has been processed !", "Don&apos;t hesitate to try the links below !"]'><span class="wrap"></span></h2>`;
+            $('#processed').append('<i class="icon-thunder fa-3x mb-2 text-white"></i>');
+            $('#processed').append(elem);
+            /* $('#processed').remove(document.getElementById("contento"));
+            /* document.getElementById("contento").innerHTML = elem; */
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
           });
+          if ( window.history.replaceState ) {
+          window.history.replaceState(null, null, window.location.href);
+        }
         </script>
     </body>
 </html>
