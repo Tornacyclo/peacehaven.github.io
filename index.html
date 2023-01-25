@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Void" />
+        <meta name="author" content="D.D." />
         <title>David DANG - Portfolio</title>
         <link rel="icon" type="image/x-icon" href="assets/Golden Pheasant ICON.ico" />
         <!--Google fonts-->
@@ -164,8 +164,8 @@
                             <!--Email address input-->
                             <div class="col input-group-newsletter">
                                 <div class="col"><input class="form-control" style="margin-bottom: 10px;" type="text" name="entry.760458597" id="entry.760458597" placeholder="Enter name..." aria-label="Enter name..."></div>
-                                <div class="col"><input class="form-control" style="margin-bottom: 10px;" id="emailAddress" type="Email" name="entry.135858689" id="entry.135858689" placeholder="Enter email address..." ></div>
-                                <div class="col"><textarea class="form-control" style="margin-bottom: 10px;" name="entry.673958742" id="entry.673958742" placeholder="Enter message..." ></textarea></div>
+                                <div class="col"><input class="form-control" style="margin-bottom: 10px;" id="emailAddress" type="Email" name="entry.135858689" id="entry.135858689" placeholder="Enter email address..." aria-label="Enter email address..."></div>
+                                <div class="col"><textarea class="form-control" style="margin-bottom: 10px;" name="entry.673958742" id="entry.673958742" placeholder="Enter message..." aria-label="Enter message..."></textarea></div>
                                 <div class="col"><select class="form-control" style="margin-bottom: 10px; height:50px;" name="entry.402816371" id="entry.402816371">
                                   <option selected="true" disabled="disabled">Choose country</option>
                                   <option value="Afghanistan">Afghanistan</option>
@@ -489,7 +489,50 @@
             var elem = `<h2 class="text-white mb-5 typewrite" data-period="2000" data-type='["Your submission has been processed !", "Don&apos;t hesitate to try the links below !"]'><span class="wrap"></span></h2>`;
             $('#processed').append('<i class="icon-thunder fa-3x mb-2 text-white"></i>');
             $('#processed').append(elem);
-            /* $('#processed').remove(document.getElementById("contento"));
+            /* function sendMessage() {
+              const request = new XMLHttpRequest();
+              request.open("POST", "https://discord.com/api/webhooks/1067898786778714193/Qi29dH2JJ7V9RSRV_5lHNxDW-PokSsWNR_tEpv5yllVnKwap9dBLV-p2eQPgc0XPUvDK");
+              request.setRequestHeader('Content-type', 'application/json');
+              const params = {
+                Name: "entry.760458597",
+                Email: "entry.135858689",
+                Message: "entry.673958742",
+                Country: "entry.402816371"
+              }
+              request.send(JSON.stringify(params));
+            }
+            async function submitted(ev) {
+              ev.preventDefault();
+              const senderEmail = document
+                .getElementById('entry.135858689').value;
+              const senderMessage = document
+                .getElementById('entry.673958742').value;
+              const webhookBody = {
+                embeds: [{
+                  title: 'Contact Form Submitted',
+                  fields: [
+                    { name: 'Sender', value: senderEmail },
+                    { name: 'Message', value: senderMessage }
+                  ]
+                }],
+              };
+              const webhookUrl = 'https://discord.com/api/webhooks/1067898786778714193/Qi29dH2JJ7V9RSRV_5lHNxDW-PokSsWNR_tEpv5yllVnKwap9dBLV-p2eQPgc0XPUvDK';
+              const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                muteHttpExceptions: false,
+                body: JSON.stringify(webhookBody),
+                mode: 'no-cors',
+              });
+              if (response.ok) {
+                alert('I have received your message!');
+              } else {
+                alert('There was an error! Try again later!');
+              }
+            }
+            $('#processed').remove(document.getElementById("contento"));
             /* document.getElementById("contento").innerHTML = elem; */
             var elements = document.getElementsByClassName('typewrite');
             for (var i=0; i<elements.length; i++) {
