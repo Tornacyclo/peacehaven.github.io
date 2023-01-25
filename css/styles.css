@@ -12034,12 +12034,7 @@
 
 .video-contening {
   position: absolute;
-  object-fit: none;
-  height: auto;
+  object-fit: fill;
   width: 100%;
-  padding-right: auto;
-  padding-left: auto;
-  margin-right: auto;
-  margin-left: auto;
   z-index: -1;
 }

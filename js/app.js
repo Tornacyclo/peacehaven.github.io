@@ -6,7 +6,9 @@ const loader = document.querySelector('.loader');
 window.addEventListener('load', () => {
 
   loader.classList.add('fondu-out');
-  //loaderbook.classList.add('fondu-out');
+
+  /* loaderbook.classList.add('fondu-out'); */
+
   document.body.classList.remove('no-scroll');
 
   // Activate Bootstrap scrollspy on the main nav element
@@ -83,6 +85,7 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 
+document.querySelector('#background-video').playbackRate = 0.5;
 
 /* //Remove the elements that is not required anymore
 setTimeout(() => {
