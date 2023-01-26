@@ -1,2 +1,3 @@
 # peacehegemony.github.io
-# Peace Haven : a personal website
+## Peace Haven : 
+### a personal website
