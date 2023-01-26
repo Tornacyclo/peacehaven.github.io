@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Void" />
-        <meta name="author" content="D.D." />
-        <title>David DANG - Peace Haven</title>
+        <meta name="description" content="Peace Haven : a personal website" />
+        <meta name="author" content="David DANG" />
+        <title>Peace Haven</title>
         <link rel="icon" type="image/x-icon" href="assets/Golden Pheasant ICON.ico" />
         <!--Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
@@ -77,7 +77,7 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">David DANG</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Engineering & Writing</h2>
-                        <a class="btn btn-primary" href="#presentation">Presentation</a>
+                        <a class=" button-fluo" href="#presentation"><span></span><span></span><span></span><span></span>Presentation</a>
                     </div>
                 </div>
             </div>
@@ -412,7 +412,7 @@
                                   <option value="Yemen">Yemen</option>
                                   <option value="Zambia">Zambia</option>
                                   <option value="Zimbabwe">Zimbabwe</option></select></div>
-                                <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Notify me !</button></div>
+                                <div class="col-auto"><button class=" button-fluo invisible-butt" id="submitButton" type="submit"><span></span><span></span><span></span><span></span>Notify me !</button></div>
                             </div>
                             <div class="invalid-feedback mt-2">An email is required.</div>
                             <div class="invalid-feedback mt-2">Email is not valid.</div>
@@ -489,51 +489,6 @@
             var elem = `<h2 class="text-white mb-5 typewrite" data-period="2000" data-type='["Your submission has been processed !", "Don&apos;t hesitate to try the links below !"]'><span class="wrap"></span></h2>`;
             $('#processed').append('<i class="icon-thunder fa-3x mb-2 text-white"></i>');
             $('#processed').append(elem);
-            /* function sendMessage() {
-              const request = new XMLHttpRequest();
-              request.open("POST", "https://discord.com/api/webhooks/1067898786778714193/Qi29dH2JJ7V9RSRV_5lHNxDW-PokSsWNR_tEpv5yllVnKwap9dBLV-p2eQPgc0XPUvDK");
-              request.setRequestHeader('Content-type', 'application/json');
-              const params = {
-                Name: "entry.760458597",
-                Email: "entry.135858689",
-                Message: "entry.673958742",
-                Country: "entry.402816371"
-              }
-              request.send(JSON.stringify(params));
-            }
-            async function submitted(ev) {
-              ev.preventDefault();
-              const senderEmail = document
-                .getElementById('entry.135858689').value;
-              const senderMessage = document
-                .getElementById('entry.673958742').value;
-              const webhookBody = {
-                embeds: [{
-                  title: 'Contact Form Submitted',
-                  fields: [
-                    { name: 'Sender', value: senderEmail },
-                    { name: 'Message', value: senderMessage }
-                  ]
-                }],
-              };
-              const webhookUrl = 'https://discord.com/api/webhooks/1067898786778714193/Qi29dH2JJ7V9RSRV_5lHNxDW-PokSsWNR_tEpv5yllVnKwap9dBLV-p2eQPgc0XPUvDK';
-              const response = await fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                muteHttpExceptions: false,
-                body: JSON.stringify(webhookBody),
-                mode: 'no-cors',
-              });
-              if (response.ok) {
-                alert('I have received your message!');
-              } else {
-                alert('There was an error! Try again later!');
-              }
-            }
-            $('#processed').remove(document.getElementById("contento"));
-            /* document.getElementById("contento").innerHTML = elem; */
             var elements = document.getElementsByClassName('typewrite');
             for (var i=0; i<elements.length; i++) {
                 var toRotate = elements[i].getAttribute('data-type');
