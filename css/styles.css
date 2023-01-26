@@ -12011,10 +12011,6 @@
 
 .fa {
 
-  display: inline-block;
-  border-radius: 60px;
-  box-shadow: 0 0 2px #888;
-  padding: 0.5em 0.6em;
   font-size: 20px;
 
 }
@@ -12067,12 +12063,12 @@
 
 }
 .button-fluo:hover {
-    background: #03e9f4;
+    background: #00fbff;
     color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
+    box-shadow: 0 0 5px #00fbff,
+                0 0 25px #00fbff,
+                0 0 50px #00fbff,
+                0 0 200px #00fbff;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 /* .button-fluo:nth-child(1){
@@ -12090,7 +12086,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg,transparent,#03e9f4);
+    background: linear-gradient(90deg, transparent, #00fbff);
     animation: animate1 1s linear infinite;
 }
 @keyframes animate1{
@@ -12106,7 +12102,7 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg,transparent,#03e9f4);
+    background: linear-gradient(180deg, transparent, #00fbff);
     animation: animate2 1s linear infinite;
     animation-delay: 0.25s;
 }
@@ -12123,7 +12119,7 @@
     right: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg,transparent,#03e9f4);
+    background: linear-gradient(270deg, transparent, #00fbff);
     animation: animate3 1s linear infinite;
     animation-delay: 0.50s;
 }
@@ -12142,7 +12138,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg,transparent,#03e9f4);
+    background: linear-gradient(360deg, transparent, #00fbff);
     animation: animate4 1s linear infinite;
     animation-delay: 0.75s;
 }
@@ -12157,26 +12153,32 @@
 
 .button-fluo::after {
   content: '';
-  width: 30px; height: 30px;
+  width: 0px; height: 0px;
   border-radius: 100%;
-  border: 6px solid #03e9f4;
+  border: 2px solid #0F52BA;
   position: absolute;
   z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
+  animation: ring 2s infinite;
 }
 
 @keyframes ring {
   0% {
-    width: 30px;
-    height: 30px;
+    width: 0px;
+    height: 0px;
     opacity: 1;
   }
+  70% {
+    width: 21em;
+    height: 21em;
+    border: 2px solid #00fbff;
+    opacity: 0.7;
+  }
   100% {
-    width: 300px;
-    height: 300px;
+    width: 30em;
+    height: 30em;
     opacity: 0;
   }
 }
@@ -12184,4 +12186,139 @@
 .invisible-butt {
     background: transparent;
     border: none !important;
+}
+
+.golden-aura {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  line-height: 3rem;
+  background: #171515;
+  border-radius: 100%;
+  font-size: 33px;
+  color: #303030;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.golden-aura:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #FFD700;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.golden-aura:hover:before {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #FFD700;
+  filter: blur(3px);
+}
+
+.golden-aura:hover {
+  color: #ffa502;
+  box-shadow: 0 0 15px #FFD700;
+  text-shadow: 0 0 15px #FFD700;
+}
+
+/* .golden-aura i {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+} */
+
+.golden-aura .tooltip {
+  top: 0;
+  font-size: 16px;
+  width: max-content;
+  background: #171515;
+  color: #303030;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.golden-aura .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #171515;
+  bottom: -0.3em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.golden-aura:hover .tooltip {
+  top: -3em;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.golden-aura:hover span, .golden-aura:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.golden-aura:hover, .golden-aura:hover .tooltip, .golden-aura:hover .tooltip::before {
+  color: #FFD700;
+}
+
+.button-flip {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.button-flip a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.button-flip a:before, .button-flip a:after {
+  position: absolute;
+  content: "Apolline";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.button-flip a:before {
+  color: #f8f9fa;
+  background: #303030;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.button-flip a:after {
+  color: #FFD700;
+  background: #303030;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.button-flip a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
 }
