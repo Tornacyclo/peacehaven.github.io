@@ -12321,3 +12321,55 @@
 .button-flip a:hover {
   transform: translateZ(-25px) rotateX(-90deg);
 }
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* .navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+} */
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: inherit;
+}
+
+.subnav:hover .subnav-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/*#mainNav .subnav:hover .subnav-content {
+  color: fade(#fff, 80%);
+  outline: none;
+  background-color: transparent;
+}
+/* #mainNav .subnav:focus {
+  outline: none;
+  background-color: transparent;
+} */
