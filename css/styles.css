@@ -12323,18 +12323,21 @@
 }
 
 .subnav {
-  float: left;
-  overflow: hidden;
+  position: relative;
+  display: inline-block;
 }
 
 .subnav .subnavbtn {
   font-size: 16px;
   border: none;
   outline: none;
-
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+}
+
+.subnav:hover {
+  background-color: #FFD700;
 }
 
 /* .navbar a:hover, .subnav:hover .subnavbtn {
@@ -12344,27 +12347,30 @@
 .subnav-content {
   display: none;
   position: absolute;
-  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  background-color: #FFD700;
   z-index: 1;
 }
 
 .subnav-content a {
-  float: left;
   color: inherit;
   text-decoration: none;
+  display: block;
 }
 
 .subnav-content a:hover {
-  background-color: #eee;
-  color: inherit;
+  background-color: #FFD700;
+  filter: hue-rotate(180deg);
+  color: #fff;
+
 }
 
 .subnav:hover .subnav-content {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
-/*#mainNav .subnav:hover .subnav-content {
+/* #mainNav .subnav:hover .subnav-content {
   color: fade(#fff, 80%);
   outline: none;
   background-color: transparent;
