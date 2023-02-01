@@ -12337,7 +12337,7 @@
 }
 
 .subnav:hover {
-  background-color: #FFD700;
+  background-color: #000;
 }
 
 /* .navbar a:hover, .subnav:hover .subnavbtn {
@@ -12349,7 +12349,7 @@
   position: absolute;
   width: 100%;
   text-align: center;
-  background-color: #FFD700;
+  background-color: #000;
   z-index: 1;
 }
 
@@ -12360,8 +12360,8 @@
 }
 
 .subnav-content a:hover {
-  background-color: #FFD700;
-  filter: hue-rotate(180deg);
+  background-color: red;
+  /* filter: hue-rotate(180deg); */
   color: #fff;
 
 }
@@ -12375,7 +12375,13 @@
   outline: none;
   background-color: transparent;
 }
-/* #mainNav .subnav:focus {
+#mainNav .subnav:focus {
   outline: none;
   background-color: transparent;
 } */
+
+
+.scrolled {
+  background-color: #FFD700 !important;
+  transition: background-color 200ms linear;
+}

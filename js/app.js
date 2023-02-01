@@ -85,7 +85,60 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 
+
 document.querySelector('#background-video').playbackRate = 0.5;
+
+
+function modifier(sChemin, sPropriete, sVal) {
+  var bFind = false,
+      aStyleSheets = document.styleSheets,
+      exp_reg =  new RegExp(sChemin,"gi");
+  //console.log(aStyleSheets);
+  // si la css est externe et d'un autre nom de domaine
+  // cssRules: lève une DOMException: "The operation is insecure."
+  // code: 18
+  // message: "The operation is insecure."
+  // name: "SecurityError"
+  //
+  for(var i = 0; i < aStyleSheets.length; ++i){
+    try{
+      var aCssRules =  aStyleSheets[i].cssRules;
+      for(var j = 0; j < aCssRules.length; ++j){
+        console.log(aCssRules[j].selectorText);
+        if(exp_reg.test(aCssRules[j].selectorText)){
+          aCssRules[j].style[sPropriete] = sVal;
+          console.log("Trouvé", aCssRules[j].style[sPropriete]);
+          bFind = true;
+        }//if
+      }//for
+    }catch(error) {
+      //cssRules: lève une DOMException: "The operation is insecure."
+      //console.log(error);
+      continue
+    }
+  }
+  return bFind;
+}
+
+
+var subnavContent = document.querySelectorAll(".subnav-content");
+var subnavHover = document.querySelectorAll(".subnav:hover");
+
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    console.log(modifier(".subnav:hover", "background-color", "#FFD700"));
+    for (var i = 0; i < subnavContent.length; i++) {
+      subnavContent[i].classList.add("scrolled");
+    }
+  } else {
+    console.log(modifier(".subnav:hover", "background-color", "#000"));
+    for (var i = 0; i < subnavContent.length; i++) {
+      subnavContent[i].classList.remove("scrolled");
+    }
+  }
+};
+
 
 /* //Remove the elements that is not required anymore
 setTimeout(() => {
