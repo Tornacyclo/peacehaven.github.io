@@ -1,9 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.inner {
+  max-width: 75%;
+}
+
+
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11919,9 +11924,9 @@
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?sd57vx');
   src:  url('fonts/icomoon.eot?sd57vx#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?sd57vx') format('truetype'),
-    url('fonts/icomoon.woff?sd57vx') format('woff'),
-    url('fonts/icomoon.svg?sd57vx#icomoon') format('svg');
+  url('fonts/icomoon.ttf?sd57vx') format('truetype'),
+  url('fonts/icomoon.woff?sd57vx') format('woff'),
+  url('fonts/icomoon.svg?sd57vx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
