@@ -9,34 +9,35 @@ function musicPlay() {
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 const notes = [
-  {f:262,d:.5,t:"Hap",p:p1},
-  {f:262,d:.5,t:"py&nbsp;",p:p1},
-  {f:294,d:1,t:"Birth",p:p1},
-  {f:262,d:1,t:"day&nbsp;",p:p1},
-  {f:349,d:1,t:"To&nbsp;",p:p1},
-  {f:330,d:2,t:"You",p:p1},
+  {f:262, d:.5, t:"Hap", p:p1},
+  {f:262, d:.5, t:"py&nbsp;", p:p1},
+  {f:294, d:1, t:"Birth", p:p1},
+  {f:262, d:1, t:"day&nbsp;", p:p1},
+  {f:349, d:1, t:"To&nbsp;", p:p1},
+  {f:330, d:2, t:"You", p:p1},
   
-  {f:262,d:.5,t:"Hap",p:p2},
-  {f:262,d:.5,t:"py&nbsp;",p:p2},
-  {f:294,d:1,t:"Birth",p:p2},
-  {f:262,d:1,t:"day&nbsp;",p:p2},
-  {f:392,d:1,t:"To&nbsp;",p:p2},
-  {f:349,d:2,t:"You",p:p2},
+  {f:262, d:.5, t:"Hap", p:p2},
+  {f:262, d:.5, t:"py&nbsp;", p:p2},
+  {f:294, d:1, t:"Birth", p:p2},
+  {f:262, d:1, t:"day&nbsp;", p:p2},
+  {f:392, d:1, t:"To&nbsp;", p:p2},
+  {f:349, d:2, t:"You", p:p2},
   
-  {f:262,d:.5,t:"Hap",p:p3},
-  {f:262,d:.5,t:"py&nbsp;",p:p3},
-  {f:523,d:1,t:"Birth",p:p3},
-  {f:440,d:1,t:"day&nbsp;",p:p3},
-  {f:349,d:1,t:"Dear&nbsp;",p:p3},
-  {f:330,d:1,t:"Apo",p:p3},
-  {f:294,d:3,t:"lline",p:p3},
+  {f:262, d:.5, t:"Hap", p:p3},
+  {f:262, d:.5, t:"py&nbsp;", p:p3},
+  {f:523, d:1, t:"Birth", p:p3},
+  {f:440, d:1, t:"day&nbsp;", p:p3},
+  {f:349, d:1, t:"Dear&nbsp;", p:p3},
+  {f:330, d:.5, t:"A", p:p3},
+  {f:330, d:1, t:"po", p:p3},
+  {f:294, d:3, t:"lline", p:p3},
   
-  {f:466,d:.5,t:"Hap",p:p4},
-  {f:466,d:.5,t:"py&nbsp;",p:p4},
-  {f:440,d:1,t:"Birth",p:p4},
-  {f:349,d:1,t:"day&nbsp;",p:p4},
-  {f:392,d:1,t:"To&nbsp;",p:p4},
-  {f:349,d:6,t:"Youuu",p:p4},
+  {f:466, d:.5, t:"Hap", p:p4},
+  {f:466, d:.5, t:"py&nbsp;", p:p4},
+  {f:440, d:1, t:"Birth", p:p4},
+  {f:349, d:1, t:"day&nbsp;", p:p4},
+  {f:392, d:1, t:"To&nbsp;", p:p4},
+  {f:349, d:6, t:"Youuu", p:p4},
 ];
 
 //DOM
@@ -56,9 +57,9 @@ let sounds = [];
 class Sound{
   constructor(freq,dur,i){
     this.stop = true;
-    this.frequency = freq;// la frecuencia
-    this.waveform = "triangle";// la forma de onda
-    this.dur = dur;// la duración en segundos
+    this.frequency = freq; // la frecuencia
+    this.waveform = "sine"; // la forma de onda
+    this.dur = dur; // la duración en segundos
     this.speed = this.dur*speed;
     this.initialGain = .15;
     this.index = i;
@@ -101,7 +102,7 @@ class Sound{
 }
 
 for(let i=0; i < notes.length; i++){
-  let sound = new Sound(notes[i].f, notes[i].d,i);
+  let sound = new Sound(notes[i].f, notes[i].d, i);
   sounds.push(sound);
 }
 
@@ -137,10 +138,10 @@ class Particle{
   constructor(){
     this.x = Math.random() * cw;
     this.y = Math.random() * ch;
-    this.r = 15 + ~~(Math.random() * 20);//radius of the circumcircle
-    this.l = 3 + ~~(Math.random() * 2);//polygon sides
-    this.a = 2*Math.PI/this.l;// angle between polygon vertices
-    this.rot = Math.random()*Math.PI;// polygon rotation
+    this.r = 15 + ~~(Math.random() * 20); //radius of the circumcircle
+    this.l = 3 + ~~(Math.random() * 2); //polygon sides
+    this.a = 2*Math.PI/this.l; // angle between polygon vertices
+    this.rot = Math.random()*Math.PI; // polygon rotation
     this.speed = .05 + Math.random()/2;
     this.rotSpeed = 0.005 + Math.random()*.005;
     this.color = colors[~~(Math.random() * colors.length)];
