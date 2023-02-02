@@ -1,3 +1,11 @@
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+  document.getElementById('player').volume = 0.05;
+  document.getElementById('player').play();
+  document.removeEventListener('click', musicPlay);
+}
+
+
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 const notes = [
