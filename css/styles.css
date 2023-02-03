@@ -12044,7 +12044,8 @@
 
 .button-fluo {
     --main-color: #00fbff;
-    --ring-color: #0F52BA;
+    --ring-color: #fff;
+    /* #0F52BA */
     position: relative;
     display: inline-block;
     padding: 25px 30px;
