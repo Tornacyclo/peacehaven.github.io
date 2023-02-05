@@ -12182,6 +12182,9 @@
 }
 
 .golden-aura {
+  --aura-color: #FFD700;
+  --base-color: #757575;
+  --background-color: #000;
   position: relative;
   height: 3rem;
   width: 3rem;
@@ -12189,10 +12192,10 @@
   text-align: center;
   text-decoration: none;
   line-height: 3rem;
-  background: #171515;
+  background: var(--background-color);
   border-radius: 100%;
   font-size: 33px;
-  color: #303030;
+  color: var(--base-color);
   transition: .5s;
   display: flex;
   align-items: center;
@@ -12207,7 +12210,7 @@
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  background: #FFD700;
+  background: var(--aura-color);
   transition: .5s;
   transform: scale(.9);
   z-index: -1;
@@ -12215,22 +12218,21 @@
 
 .golden-aura:hover:before {
   transform: scale(1.2);
-  box-shadow: 0 0 15px #FFD700;
+  box-shadow: 0 0 15px var(--aura-color);
   filter: blur(3px);
 }
 
 .golden-aura:hover {
-  color: #ffa502;
-  box-shadow: 0 0 15px #FFD700;
-  text-shadow: 0 0 15px #FFD700;
+  box-shadow: 0 0 15px var(--aura-color);
+  text-shadow: 0 0 15px var(--aura-color);
 }
 
 .golden-aura .tooltip {
   top: 0;
   font-size: 16px;
   width: max-content;
-  background: #171515;
-  color: #303030;
+  background: var(--background-color);
+  color: var(--base-color);
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -12244,7 +12246,7 @@
   content: "";
   height: 8px;
   width: 8px;
-  background: #171515;
+  background: var(--background-color);
   bottom: -0.3em;
   left: 50%;
   transform: translate(-50%) rotate(45deg);
@@ -12263,8 +12265,9 @@
 }
 
 .golden-aura:hover, .golden-aura:hover .tooltip, .golden-aura:hover .tooltip::before {
-  color: #FFD700;
+  color: var(--aura-color);
 }
+
 
 .button-flip {
   position: relative;
