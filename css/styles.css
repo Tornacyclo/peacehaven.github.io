@@ -12372,3 +12372,9 @@
   background-color: #FFD700 !important;
   transition: background-color 200ms linear;
 }
+
+
+label[for="winnie"], #pooh {
+  display: none;
+  visibility: hidden;
+}

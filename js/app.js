@@ -140,6 +140,18 @@ window.onscroll = function() {
 };
 
 
+function validateForm(form) {
+  var x = document.forms["form-signup"]["winnie"].value;
+  if ( x == "" || x == null ){// if the honeypot was ignored, it's a hu-mon
+  
+  }
+  else{// the honeypot was filled in, it's a robot
+    form.action="html/Void.html"// link directly to thank you without actually processing form    
+    return false;
+  }
+}
+
+
 /* //Remove the elements that is not required anymore
 setTimeout(() => {
 
