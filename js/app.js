@@ -181,4 +181,13 @@ const validate = () => {
   return false;
 }
 
-$('#emailAddress').on('input', validate); */
+$('#emailAddress').on('input', validate);
+
+
+$(document).ready(function(){
+  $("p").hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+    $(this).css("background-color", "pink");
+  });
+}); */
