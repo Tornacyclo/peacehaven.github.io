@@ -12323,11 +12323,12 @@
   margin: 0;
 }
 
-.subnav:hover {
+
+/* .subnav:hover {
   background-color: #000;
 }
 
-/* .navbar a:hover, .subnav:hover .subnavbtn {
+.navbar a:hover, .subnav:hover .subnavbtn {
   background-color: red;
 } */
 
