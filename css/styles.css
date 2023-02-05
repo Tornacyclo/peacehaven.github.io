@@ -12194,7 +12194,7 @@
   line-height: 3rem;
   background: var(--background-color);
   border-radius: 100%;
-  font-size: 33px;
+  font-size: 30px; /* !!! */
   color: var(--base-color);
   transition: .5s;
   display: flex;
