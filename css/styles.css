@@ -12380,10 +12380,12 @@ label[for="winnie"], #pooh {
 }
 
 table, td {
-    border: 1px solid #333;
+  border: 1px solid #333;
+  background-color: #fff;
 }
 
 thead, tfoot {
-    background-color: #333;
-    color: #fff;
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff;
 }
