@@ -5,6 +5,9 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+
  :root {
    --bs-blue: #0d6efd;
    --bs-indigo: #6610f2;
@@ -74,6 +77,8 @@
      scroll-behavior: smooth;
    }
  }
+
+
 
  body {
    margin: 0;
@@ -12045,6 +12050,7 @@
 .button-fluo {
     --main-color: #00fbff;
     --ring-color: #fff;
+    --text-color: #000;
     /* #0F52BA */
     position: relative;
     display: inline-block;
@@ -12061,7 +12067,7 @@
 }
 .button-fluo:hover {
     background: var(--main-color);
-    color: #050801;
+    color: var(--text-color);
     box-shadow: 0 0 5px var(--main-color),
                 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
@@ -12184,6 +12190,7 @@
 .golden-aura {
   --aura-color: #FFD700;
   --base-color: #757575;
+  --super-color: #fd0;
   --background-color: #000;
   position: relative;
   height: 3rem;
@@ -12223,6 +12230,7 @@
 }
 
 .golden-aura:hover {
+  color: var(--super-color);
   box-shadow: 0 0 15px var(--aura-color);
   text-shadow: 0 0 15px var(--aura-color);
 }
@@ -12391,6 +12399,10 @@ input:focus {
 table, td {
   border: 1px solid #333;
   background-color: #fff;
+}
+
+tr .title {
+  font-weight: bold;
 }
 
 thead, tfoot {
