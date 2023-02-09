@@ -92,7 +92,7 @@ document.querySelector('#background-video').playbackRate = 0.5;
 function modifier(sChemin, sPropriete, sVal) {
   var bFind = false,
       aStyleSheets = document.styleSheets,
-      exp_reg =  new RegExp(sChemin,"gi");
+      exp_reg =  new RegExp(sChemin, "gi");
   //console.log(aStyleSheets);
   // si la css est externe et d'un autre nom de domaine
   // cssRules: lève une DOMException: "The operation is insecure."
@@ -111,12 +111,14 @@ function modifier(sChemin, sPropriete, sVal) {
           bFind = true;
         }//if
       }//for
+
     }catch(error) {
       //cssRules: lève une DOMException: "The operation is insecure."
       //console.log(error);
       continue
     }
   }
+
   return bFind;
 }
 
