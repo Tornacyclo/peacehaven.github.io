@@ -12306,7 +12306,6 @@
   display: inline-flex;
   height: 3rem;
   width: 10rem;
-  margin: 0 15px;
   perspective: 100rem;
 }
 
@@ -12324,7 +12323,7 @@
   position: absolute;
   content: "Apolline";
   height: 3rem;
-  width: 10rem;
+  width: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
