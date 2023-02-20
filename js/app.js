@@ -154,6 +154,70 @@ function validateForm(form) {
 }
 
 
+const lore = document.querySelector('.lore');
+const cross = document.querySelector('.cross');
+const lorebutt = document.getElementById("lore-button");
+
+
+lorebutt.onclick = function() {
+
+  lore.classList.add('fondu-in');
+
+  document.body.classList.add('no-scroll');
+  lore.style.zIndex = "9999";
+
+  setTimeout(() => {
+
+    
+
+  }, 1000)
+
+}
+
+let rippleDiv;
+
+cross.addEventListener("mouseenter", (e) => {
+  //get the coordinates of the cursor
+  const left = e.clientX - e.target.getBoundingClientRect().left;
+  const top = e.clientY - e.target.getBoundingClientRect().top;
+
+  rippleDiv = document.createElement("div");
+  rippleDiv.classList.add("ripple");
+  rippleDiv.style.left = `${left}px`;
+  rippleDiv.style.top = `${top}px`;
+
+  cross.prepend(rippleDiv);
+});
+
+cross.addEventListener("mouseleave", () => {
+  cross.removeChild(rippleDiv);
+});
+
+cross.onclick = function() {
+
+  lore.classList.add('fondu-out');
+
+  document.body.classList.remove('no-scroll');
+
+  // Activate Bootstrap scrollspy on the main nav element
+  const mainNav = document.body.querySelector('#mainNav');
+  if (mainNav) {
+      new bootstrap.ScrollSpy(document.body, {
+          target: '#mainNav',
+          offset: 74,
+      });
+  };
+
+  setTimeout(() => {
+
+    lore.style.zIndex = "-1";
+
+  }, 1000)
+
+}
+
+
+
 /* //Remove the elements that is not required anymore
 setTimeout(() => {
 
