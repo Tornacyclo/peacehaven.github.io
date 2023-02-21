@@ -11999,12 +11999,11 @@
 
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?sd57vx');
-  src:  url('fonts/icomoon.eot?sd57vx#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?sd57vx') format('truetype'),
-  url('fonts/icomoon.woff?sd57vx') format('woff'),
-  url('fonts/icomoon.svg?sd57vx#icomoon') format('svg');
+  font-family: 'ArtisMagna';
+  src: url('fonts/ArtisMagna.ttf') format('truetype'),
+  url('fonts/ArtisMagna.woff') format('woff'),
+  url('fonts/ArtisMagna.svg') format('svg');
+
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12012,7 +12011,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'ArtisMagna' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -12025,41 +12024,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-medal:before {
-  content: "\e903";
+.icon-Medal:before {
+  content: "\e007";
 }
-.icon-thunder:before {
-  content: "\e904";
+.icon-Thunder:before {
+  content: "\e00d";
 }
-.icon-plane:before {
-  content: "\e905";
+.icon-Plane:before {
+  content: "\e00a";
 }
-.icon-phone:before {
-  content: "\e91b";
+.icon-Phone:before {
+  content: "\e009";
 }
-.icon-mail:before {
-  content: "\e91c";
+.icon-Mail:before {
+  content: "\e006";
 }
-.icon-address:before {
-  content: "\e91d";
+.icon-Address:before {
+  content: "\e000";
 }
-.icon-kaggle:before {
-  content: "\e900";
+.icon-Kaggle:before {
+  content: "\e005";
 }
-.icon-certificate:before {
-  content: "\e906";
+.icon-Certificate:before {
+  content: "\e002";
 }
-.icon-analytics:before {
-  content: "\e901";
+.icon-Analytics:before {
+  content: "\e001";
 }
-.icon-writing:before {
-  content: "\e90a";
+.icon-Writing:before {
+  content: "\e00e";
 }
-.icon-magic:before {
-  content: "\e90b";
+.icon-SimulationProject:before {
+  content: "\e00c";
 }
-.icon-github:before {
-  content: "\e91a";
+.icon-Github:before {
+  content: "\e004";
+}
+.icon-DrivenData:before {
+  content: "\e003";
+}
+.icon-PeaceHaven:before {
+  content: "\e008";
+}
+.icon-QuantConnect:before {
+  content: "\e00b";
 }
 
 .fa-2x {
