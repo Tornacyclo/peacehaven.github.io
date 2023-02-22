@@ -158,8 +158,6 @@ lorebutt.addEventListener('click', function() {
       //restart animation rotate
       lore.classList.remove('fading-out');
       void lore.offsetWidth;
-      lore.classList.add('fading-in');
-
   }
   
   document.body.classList.add('no-scroll');
@@ -195,12 +193,10 @@ cross.addEventListener("mouseleave", () => {
 cross.addEventListener('click', function() {
 
   //checking if there is a class 
-  if (lore.classList.contains('fading-out')) {
+  if (lore.classList.contains('fading-in')) {
     //restart animation rotate
-    lore.classList.remove('fading-out');
+    lore.classList.remove('fading-in');
     void lore.offsetWidth;
-    lore.classList.add('fading-in');
-
 }
   
   document.body.classList.remove('no-scroll');

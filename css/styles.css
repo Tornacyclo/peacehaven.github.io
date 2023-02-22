@@ -12041,10 +12041,13 @@
 
 @font-face {
   font-family: 'ArtisMagna';
-  src: url('fonts/ArtisMagna.ttf') format('truetype'),
-  url("fonts/ArtisMagna.otf") format("opentype");
-  url('fonts/ArtisMagna.woff') format('woff');
-  url('fonts/ArtisMagna.svg') format('svg');
+  src: url('fonts/ArtisMagna.eot'); /* IE9 Compat Modes */
+  src: url('fonts/ArtisMagna.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/ArtisMagna.woff2') format('woff2'); /* Super Modern Browsers */
+  url('fonts/ArtisMagna.woff') format('woff'); /* Pretty Modern Browsers */
+  url('fonts/ArtisMagna.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/ArtisMagna.svg#ArtisMagna') format('svg'); /* Legacy iOS */
+  url('fonts/ArtisMagna.otf') format('opentype');
 
   font-weight: normal;
   font-style: normal;
