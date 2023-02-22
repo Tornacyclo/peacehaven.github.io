@@ -11719,6 +11719,7 @@
   justify-content: center;
   align-items: center;
   z-index: -1;
+  opacity: 0;
 }
 
 .cross {
@@ -11833,13 +11834,53 @@
 
 
 .fondu-out {
-    opacity: 0;
-    transition: opacity 0.4s ease-out;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 
 .fondu-in {
   opacity: 1;
   transition: opacity 0.4s ease-in;
+}
+
+.fading-out {
+  animation: move-behind 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.fading-in {
+  animation: move-front 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+@keyframes move-front {
+  0 {
+    z-index: -1;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    z-index: 9999;
+    opacity: 1;
+  }
+}
+
+@keyframes move-behind {
+  0 {
+    z-index: 9999;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
 }
 
 
@@ -12001,7 +12042,8 @@
 @font-face {
   font-family: 'ArtisMagna';
   src: url('fonts/ArtisMagna.ttf') format('truetype'),
-  url('fonts/ArtisMagna.woff') format('woff'),
+  url("fonts/ArtisMagna.otf") format("opentype");
+  url('fonts/ArtisMagna.woff') format('woff');
   url('fonts/ArtisMagna.svg') format('svg');
 
   font-weight: normal;
@@ -12292,7 +12334,7 @@
   line-height: 3rem;
   background: var(--background-color);
   border-radius: 100%;
-  font-size: 30px; /* !!! */
+  font-size: 20px; /* !!! */
   color: var(--base-color);
   transition: .5s;
   display: flex;

@@ -5,9 +5,7 @@ const loader = document.querySelector('.loader');
 //Smoothly make the loader disappear and change its z-index to something lower than the buttons
 window.addEventListener('load', () => {
 
-  loader.classList.add('fondu-out');
-
-  /* loaderbook.classList.add('fondu-out'); */
+  loader.classList.add('fading-out');
 
   document.body.classList.remove('no-scroll');
 
@@ -19,12 +17,6 @@ window.addEventListener('load', () => {
           offset: 74,
       });
   };
-
-  setTimeout(() => {
-
-    loader.style.zIndex = "-1";
-
-  }, 1000)
 
 })
 
@@ -159,20 +151,27 @@ const cross = document.querySelector('.cross');
 const lorebutt = document.getElementById("lore-button");
 
 
-lorebutt.onclick = function() {
+lorebutt.addEventListener('click', function() {
 
-  lore.classList.add('fondu-in');
+  //checking if there is a class 
+  if (lore.classList.contains('fading-out')) {
+      //restart animation rotate
+      lore.classList.remove('fading-out');
+      void lore.offsetWidth;
+      lore.classList.add('fading-in');
 
+  }
+  
   document.body.classList.add('no-scroll');
-  lore.style.zIndex = "9999";
+  lore.classList.add('fading-in');
 
   setTimeout(() => {
 
-    
+      lore.classList.toggle('active');
 
-  }, 1000)
+  }, 200)
 
-}
+});
 
 let rippleDiv;
 
@@ -193,11 +192,19 @@ cross.addEventListener("mouseleave", () => {
   cross.removeChild(rippleDiv);
 });
 
-cross.onclick = function() {
+cross.addEventListener('click', function() {
 
-  lore.classList.add('fondu-out');
+  //checking if there is a class 
+  if (lore.classList.contains('fading-out')) {
+    //restart animation rotate
+    lore.classList.remove('fading-out');
+    void lore.offsetWidth;
+    lore.classList.add('fading-in');
 
+}
+  
   document.body.classList.remove('no-scroll');
+  lore.classList.add('fading-out');
 
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector('#mainNav');
@@ -210,11 +217,11 @@ cross.onclick = function() {
 
   setTimeout(() => {
 
-    lore.style.zIndex = "-1";
+      lore.classList.toggle('active');
 
-  }, 1000)
+  }, 200)
 
-}
+});
 
 
 
