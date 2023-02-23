@@ -115,6 +115,7 @@ function modifier(sChemin, sPropriete, sVal) {
 }
 
 
+
 var subnavContent = document.querySelectorAll(".subnav-content");
 var subnavHover = document.querySelectorAll(".subnav:hover");
 
@@ -146,6 +147,7 @@ function validateForm(form) {
 }
 
 
+
 const lore = document.querySelector('.lore');
 const cross = document.querySelector('.cross');
 const lorebutt = document.getElementById("lore-button");
@@ -155,19 +157,16 @@ lorebutt.addEventListener('click', function() {
 
   //checking if there is a class 
   if (lore.classList.contains('fading-out')) {
-      //restart animation rotate
-      lore.classList.remove('fading-out');
-      void lore.offsetWidth;
+    for (const element of document.querySelectorAll(".lore")) {
+      element.style.zIndex = -1;
+    }
+    //restart animation rotate
+    lore.classList.remove('fading-out');
+    void lore.offsetWidth;
   }
   
   document.body.classList.add('no-scroll');
   lore.classList.add('fading-in');
-
-  setTimeout(() => {
-
-      lore.classList.toggle('active');
-
-  }, 200)
 
 });
 
@@ -194,9 +193,12 @@ cross.addEventListener('click', function() {
 
   //checking if there is a class 
   if (lore.classList.contains('fading-in')) {
-    //restart animation rotate
-    lore.classList.remove('fading-in');
-    void lore.offsetWidth;
+  for (const element of document.querySelectorAll(".lore")) {
+    element.style.zIndex = 9999;
+  }
+  //restart animation rotate
+  lore.classList.remove('fading-in');
+  void lore.offsetWidth;
 }
   
   document.body.classList.remove('no-scroll');
@@ -210,12 +212,6 @@ cross.addEventListener('click', function() {
           offset: 74,
       });
   };
-
-  setTimeout(() => {
-
-      lore.classList.toggle('active');
-
-  }, 200)
 
 });
 
