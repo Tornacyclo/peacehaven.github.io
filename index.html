@@ -519,10 +519,11 @@
         <script>
             const barre = document.getElementById('bar');
             let progression = 0.01;
+            let goal = 10000;
 
 
             barre.addEventListener('click', function() {
-                barre.innerHTML = `<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${(progression/10000) * 100}%; background-color: #0F52BA" aria-valuenow="${progression}" aria-valuemin="0" aria-valuemax="10000"> ${progression}€ (${(progression/10000) * 100}%)</div>`;
+                barre.innerHTML = `<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${(progression/goal) * 100}%; background-color: #0F52BA" aria-valuenow="${progression}" aria-valuemin="0" aria-valuemax="${goal}"> ${progression}€ (${(progression/goal) * 100}%)</div>`;
             });
         </script>
         <!--Bootstrap core JS-->
