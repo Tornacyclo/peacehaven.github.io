@@ -520,10 +520,13 @@
             const barre = document.getElementById('bar');
             let progression = 1554.76;
             let goal = 10000;
+            var num = progression/goal * 100
+            var result = num.toFixed(3);
+
 
 
             barre.addEventListener('click', function() {
-                barre.innerHTML = `<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${(progression/goal) * 100}%; background-color: #0F52BA" aria-valuenow="${progression}" aria-valuemin="0" aria-valuemax="${goal}"> ${progression}€ (${(progression/goal) * 100}%)</div>`;
+                barre.innerHTML = `<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${num}%; background-color: #0F52BA" aria-valuenow="${progression}" aria-valuemin="0" aria-valuemax="${goal}"> ${progression}€ (${result}%)</div>`;
             });
         </script>
         <!--Bootstrap core JS-->
