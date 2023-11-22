@@ -1,2 +1,2 @@
 # peacehaven.github.io
-## Peace Haven : a personal website
+## Peace Haven : my vision
